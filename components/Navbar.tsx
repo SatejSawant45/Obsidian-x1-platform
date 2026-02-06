@@ -43,7 +43,7 @@ export default function Navbar() {
                         (item) => (
                             <Link
                                 key={item}
-                                href={`#${item.toLowerCase().replace(/ /g, "-")}`}
+                                href={`/#${item.toLowerCase().replace(/ /g, "-")}`}
                                 className="text-sm uppercase tracking-wider text-gray-300 hover:text-white transition-colors relative group"
                             >
                                 {item}
@@ -54,14 +54,16 @@ export default function Navbar() {
                 </div>
 
                 {/* CTA Button */}
-                <button
-                    className={cn(
-                        "relative px-6 py-2 rounded-full text-sm font-semibold tracking-wide uppercase transition-all duration-300 overflow-hidden group",
-                        "bg-transparent border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_20px_rgba(34,211,238,0.6)]"
-                    )}
-                >
-                    <span className="relative z-10">Prebook</span>
-                </button>
+                <Link href="/reserve">
+                    <button
+                        className={cn(
+                            "relative px-6 py-2 rounded-full text-sm font-semibold tracking-wide uppercase transition-all duration-300 overflow-hidden group",
+                            "bg-transparent border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_20px_rgba(34,211,238,0.6)]"
+                        )}
+                    >
+                        <span className="relative z-10">Prebook</span>
+                    </button>
+                </Link>
             </div>
 
             {/* Mobile Menu Toggle (Simplified for now) */}

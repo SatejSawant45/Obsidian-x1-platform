@@ -18,10 +18,13 @@ export default function Home() {
       </section>
 
       {/* Inside the Machine Section */}
-      <InsideTheMachine />
+      <section id="inside-the-machine">
+        <InsideTheMachine />
+      </section>
 
-
-      <DesignSection />
+      <section id="design">
+        <DesignSection />
+      </section>
 
       <section id="about-the-brand">
         <AboutBrand />
